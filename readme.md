@@ -1,6 +1,8 @@
 4-Way Intersection Simulation based on Nagel-Schreckenberg traffic model
 ------------------------------------------------------------------------
 
+![screenshot](https://github.com/asfarley/NaSchr4Way/raw/master/screenshot.png)
+
 This MATLAB/Octave script contains a simulation model of a 4-way intersection based on the Nagel-Schreckenberg (NaSchr) single lane traffic model. This script extends the NaSchr model to provide rules for vehicles passing through a signalized 4-way intersection. The intersection allows the possibility of left and right turns for a total of 12 possible movements from each approach to each exit. 
 
 In order to see results, run the `InterSimSingleRun.m` script. 
