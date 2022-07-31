@@ -14,7 +14,7 @@ The Nagel-Schreckenberg traffic model uses the following rules:
  
 This extension gives each vehicle an additional integer state value representing the movement (origin/destination pair) ranging from 1 to 12. The simulation can be viewed as a combination of normal NaSchr single lanes and areas with additional rules. 
 
-The areas with additional rules are the center of the intersection and a region extending out from the intersection by v_max cells. 
+The areas with additional rules are the center of the intersection and a region extending out from the intersection by `v_max` cells. 
 
 The additional rules are:
  * Each vehicle "projects priority" forwards in their path by `v` cells
