@@ -76,8 +76,15 @@ map_size = 2*road_length + 2*vmax + 2; %One road approach on either side, one vm
 center = zeros(map_size, map_size);
 center(map_size/2:map_size/2+1, map_size/2:map_size/2+1) = 1;
 
+map_background_grey = 0.5;
+center(1:map_size/2-1, 1:map_size/2-1) = map_background_grey;
+center(map_size/2+2:map_size, 1:map_size/2-1) = map_background_grey;
+center(1:map_size/2-1, map_size/2+2:map_size) = map_background_grey;
+center(map_size/2+2:map_size, map_size/2+2:map_size) = map_background_grey;
+
 %2. Generate vmax-length padding
 padding = zeros(map_size, map_size);
+%padding = 0.1*ones(map_size, map_size);
 padding(map_size/2 - vmax:map_size/2 - 1,map_size/2+1) = 1;           %South-north exit
 padding(map_size/2+2:map_size/2 + 1 + vmax, map_size/2+1) = 1;      %South-north approach
 padding(map_size/2 - vmax:map_size/2 - 1,map_size/2) =1;               %North-south approach
